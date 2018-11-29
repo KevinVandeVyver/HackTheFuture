@@ -3,6 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule} from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
+import { CameraService } from './Services/camera.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { AppComponent } from './app.component';
     BrowserModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [
+    CameraService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
