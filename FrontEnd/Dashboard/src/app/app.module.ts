@@ -10,6 +10,7 @@ import { HomeComponent } from './Home/home.component';
 import { Page2Component } from './page2/page2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Http, HttpModule } from '@angular/http';
+import { UploadfileComponent } from './Page3/uploadfile.component';
 
 
 @NgModule({
@@ -18,15 +19,17 @@ import { Http, HttpModule } from '@angular/http';
     NavbarComponent,
     HomeComponent,
     Page2Component,
+    UploadfileComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
     BrowserModule,
-    //HttpClientModule,
+    HttpClientModule,
     HttpModule,
     RouterModule.forRoot([
       { path: "page1", component: HomeComponent},
       { path: "page2", component: Page2Component},
+      { path: "page3", component: UploadfileComponent},
       { path: "", redirectTo: "page1", pathMatch: "full" },
     ], { useHash: false})
   ],
