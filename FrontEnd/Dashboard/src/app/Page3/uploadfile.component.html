@@ -1,0 +1,10 @@
+<div style="margin-top: 10px; margin-left:10px">
+    <h1>File upload</h1>
+    <input type="file" (change)="onFileSelected($event)">
+    <button type="button" (click)="onUpload()">Upload</button>
+    <div *ngIf="returnedData.length >=1" style="margin-top: 10px">
+        <div *ngFor="let d of returnedData">
+            {{d}}
+        </div>
+    </div>
+</div>
