@@ -1,8 +1,10 @@
 
+<button type="button" (click)="TEST($event)" class="btn btn-outline-success" mdbWavesEffect>TEST</button>
+
 
 <div id="app">
     <img #video style="-webkit-user-select: none;" src="http://172.21.1.122:8080/stream/camera-1" width="460" height="258" crossorigin>
-    <div><button id="snap" (click)="capture()">Snap Photo</button></div>
+    <div><button id="snap" (click)="capture()">Neem foto</button></div>
     <canvas #canvas id="canvas" width="640" height="480"></canvas>
     <ul > 
         <li *ngFor="let c of captures">
@@ -10,3 +12,5 @@
         </li>
     </ul>
 </div>
+
+

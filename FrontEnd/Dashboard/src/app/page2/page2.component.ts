@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { CameraService } from '../Services/camera.service';
 
 @Component({
     selector: 'app-Home',
@@ -8,6 +9,11 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 export class Page2Component{
   
+personInfo:string;
+
+
+
+
     @ViewChild("video")
     public video: ElementRef;
 
@@ -16,7 +22,7 @@ export class Page2Component{
 
     public captures: Array<any>;
 
-    public constructor() {
+    public constructor(private service: CameraService) {
         this.captures = [];
     }
 
@@ -39,6 +45,11 @@ capture(){
     
 }
 
-
+TEST(event){
+this.service.getCamera("https://images.pigeonsandplanes.com/images/c_limit,f_auto,fl_lossy,q_auto,w_1030/k21crdjfk09snhpxjmgh/kanye-west-getty-james-devaney")//this.captures[1])
+.subscribe(data=> {this.personInfo = data});
+console.log("pressed");
+console.log();
+}
 
 }
