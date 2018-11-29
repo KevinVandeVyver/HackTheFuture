@@ -21,6 +21,7 @@ export class Page2Component{
 
     public ngOnInit() { }
 
+
     /*public ngAfterViewInit() {
         if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
@@ -32,7 +33,7 @@ export class Page2Component{
 
 
 capture(){
-    var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 640, 480);
+    var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 460, 258);
     this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
 }
 
