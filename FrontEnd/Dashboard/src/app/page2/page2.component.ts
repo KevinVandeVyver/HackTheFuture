@@ -3,6 +3,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 @Component({
     selector: 'app-Home',
     templateUrl: './page2.component.html',
+    styleUrls: ['./page2.component.css']
 })
 
 export class Page2Component{
@@ -25,7 +26,7 @@ export class Page2Component{
     /*public ngAfterViewInit() {
         if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
-                this.video.nativeElement.src = "http://172.21.1.122:8080/stream/camera-1";//window.URL.createObjectURL(stream);
+                this.video.nativeElement.src = window.URL.createObjectURL(stream);
                 this.video.nativeElement.play();
             });
         }
@@ -35,6 +36,7 @@ export class Page2Component{
 capture(){
     var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 460, 258);
     this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
+    
 }
 
 
