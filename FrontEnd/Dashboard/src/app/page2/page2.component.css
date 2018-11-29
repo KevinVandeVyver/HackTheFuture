@@ -6,10 +6,14 @@ body {
     color: #2c3e50;
     margin-top: 60px;
 }
+
+#canvas{
+    text-align: center;
+}
+
 #video {
     background-color: #000000;
 }
 li {
-    display: inline;
     padding: 5px;
 }
