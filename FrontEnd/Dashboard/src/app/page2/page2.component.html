@@ -1,16 +1,25 @@
 
-<button type="button" (click)="TEST($event)" class="btn btn-outline-success" mdbWavesEffect>TEST</button>
+<button  type="button" (click)="TEST($event)" class="btn btn-outline-success" mdbWavesEffect>Send image to api</button>
+<button type="button" (click)="fixImage(c)" class="btn btn-outline-success" mdbWavesEffect>fix image</button>
+<img class="grow"  style="width:300px" style="height: 300px" 
+              src= {{imageUrl}}
+              alt="foto people">
 
 
 <div id="app">
     <img #video style="-webkit-user-select: none;" src="http://172.21.1.122:8080/stream/camera-1" width="460" height="258" crossorigin>
-    <div><button id="snap" (click)="capture()">Neem foto</button></div>
+    <div><button id="snap" (click)="capture()" class="btn btn-outline-success" mdbWavesEffect >Neem foto</button></div>
     <canvas #canvas id="canvas" width="640" height="480"></canvas>
     <ul > 
         <li *ngFor="let c of captures">
-            <img src="{{ c }}" height="480"/>
+            <img (click)="fixImage(c)" src="{{ c }}" height="480"/>
         </li>
     </ul>
+    
 </div>
+
+
+
+
 
 

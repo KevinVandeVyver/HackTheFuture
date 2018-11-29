@@ -11,7 +11,7 @@ export class CameraService {
 
     constructor(private _http: Http) { }
 
-    getCamera(imageUrl:string){
+    postCamera(imageUrl:string){
         const headers = new Headers({
             'Content-Type':'application/json',
             'Ocp-Apim-Subscription-Key':'c14068f4ec724d0ab6cf6ff6a6770835'
